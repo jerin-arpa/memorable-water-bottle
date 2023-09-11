@@ -1,0 +1,11 @@
+.cart-container {
+    margin-bottom: 25px;
+    box-shadow: 3px 3px 15px gainsboro;
+    border-radius: 15px;
+}
+
+.cart-container img {
+    width: 100px;
+    margin: 10px;
+    border-radius: 10px;
+}
