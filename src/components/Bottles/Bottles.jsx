@@ -6,7 +6,8 @@ import './Bottles.css'
 
 const Bottles = () => {
 
-    const [bottles, setBottles] = useState(0);
+    const [bottles, setBottles] = useState([]);
+    const [cart, setCart] = useState([]);
 
 
     useEffect(() => {
@@ -16,12 +17,19 @@ const Bottles = () => {
     }, []);
 
 
+    const handleAddToCart = bottle => {
+        const newCart = [...cart, bottle];
+        setCart(newCart);
+    }
+
+
     return (
         <div>
-            <h2>Bottles Here: {bottles.length}</h2>
+            <h2>Bottles Available: {bottles.length}</h2>
+            <h4>Cart: {cart.length}</h4>
             <div className="bottle-container">
                 {
-                    bottles.map(bottle => <Bottle key={bottle.id} bottle={bottle}></Bottle>)
+                    bottles.map(bottle => <Bottle key={bottle.id} bottle={bottle} handleAddToCart={handleAddToCart}></Bottle>)
                 }
             </div>
         </div >
