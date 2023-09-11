@@ -1,0 +1,14 @@
+.bottle {
+    border-radius: 15px;
+    box-shadow: 2px 2px 12px gainsboro;
+    padding: 20px;
+}
+
+.bottle img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.bottle p {
+    font-weight: bold;
+}
